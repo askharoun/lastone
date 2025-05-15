@@ -93,7 +93,7 @@ export default function Home() {
                 <ProjectCard
                   title="Hardware Project"
                   description="Tone Mixer - Tone Control/Karaoke Circuit"
-                  image="/placeholder.svg?height=300&width=400"
+                  image="/images/placeholder.svg?height=300&width=400"
                   link="https://pdfhost.io/v/RWK3ZxvUNR_Askharoun_EE_210_Final_Project_Formal_Report"
                 />
               </ParallaxEffect>
