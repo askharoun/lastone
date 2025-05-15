@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="text-center"
           >
-            <h1 style="display:inline-block; background: linear-gradient(to right, #22d3ee, #3b82f6, #9333ea); -webkit-background-clip: text; color: transparent; font-weight: bold;" className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
               Thomas Askharoun
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-cyan-300 font-light">
