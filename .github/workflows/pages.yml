@@ -14,9 +14,10 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci --legacy-peer-deps
-      - run: npm run predeploy      # runs next build && next export
-      - uses: actions/upload-pages-artifact@v3
+      - run: npm run predeploy      # next build && next export
+      - uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: out
 
   deploy:
