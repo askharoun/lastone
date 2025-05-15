@@ -8,16 +8,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - run: npm install --legacy-peer-deps
-      - run: npm run predeploy       # runs "next build", which now also exports to out/
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Build (and export static files)
+        run: npm run predeploy     # runs "next build" which outputs to /out
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
@@ -27,7 +33,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
-    environment:
-      name: github-pages
+    environment: github-pages
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
