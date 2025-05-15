@@ -91,10 +91,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ParallaxEffect>
                 <ProjectCard
-                  title="Neural Interface"
-                  description="A direct brain-computer interface using quantum entanglement principles."
+                  title="Hardware Project"
+                  description="Tone Mixer - Tone Control/Karaoke Circuit"
                   image="/placeholder.svg?height=300&width=400"
-                  link="#"
+                  link="https://pdfhost.io/v/RWK3ZxvUNR_Askharoun_EE_210_Final_Project_Formal_Report"
                 />
               </ParallaxEffect>
 
@@ -102,7 +102,7 @@ export default function Home() {
                 <ProjectCard
                   title="Quantum Compiler"
                   description="Translating classical algorithms into quantum-ready instructions."
-                  image="/placeholder.svg?height=300&width=400"
+                  image="/images/project-1.png?height=300&width=400"
                   link="#"
                 />
               </ParallaxEffect>
