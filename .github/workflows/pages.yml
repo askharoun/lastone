@@ -9,15 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
+
       - run: npm install --legacy-peer-deps
-      - run: npm run predeploy       # your "next build && next export"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: out
+      - run: npm run predeploy       # runs "next build", which now also exports to out/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -28,6 +27,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
-    environment: github-pages
+    environment:
+      name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
